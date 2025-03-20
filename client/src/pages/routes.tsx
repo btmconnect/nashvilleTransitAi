@@ -35,7 +35,7 @@ export default function Routes() {
               <ArrowLeft className="h-4 w-4" />
             </Button>
             <div>
-              <h1 className="text-xl font-bold text-blue-900">Available Routes</h1>
+              <h1 className="text-xl font-bold text-blue-900">Nashville Transit AI</h1>
               <p className="text-sm text-gray-600">Minor delay due to traffic congestion</p>
             </div>
           </div>

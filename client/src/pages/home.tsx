@@ -37,7 +37,7 @@ export default function Home() {
       <div className="fixed top-0 left-0 right-0 z-10">
         <div className="bg-gradient-to-b from-white via-white/90 to-transparent h-24 px-4 py-4">
           <div className="max-w-lg mx-auto flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-blue-900">Nashville Transit</h1>
+            <h1 className="text-2xl font-bold text-blue-900">Nashville Transit AI</h1>
             <div className="flex gap-2">
               <Button
                 variant="outline"

@@ -16,7 +16,7 @@ export default function Routes() {
   });
 
   return (
-    <div className="min-h-screen bg-background p-4">
+    <div className="min-h-screen bg-slate-900 p-4">
       <div className="max-w-4xl mx-auto space-y-6">
         <div className="flex items-center gap-4">
           <Button
@@ -24,13 +24,14 @@ export default function Routes() {
             size="icon"
             onClick={() => setLocation("/")}
             aria-label="Go back"
+            className="text-white hover:bg-slate-800"
           >
             <ArrowLeft className="h-4 w-4" />
           </Button>
-          <h1 className="text-2xl font-bold">Available Routes</h1>
+          <h1 className="text-2xl font-bold text-white">Available Routes</h1>
         </div>
 
-        <Card>
+        <Card className="bg-slate-800 border-slate-700">
           <CardContent className="p-6">
             <TransitMap />
           </CardContent>
@@ -39,7 +40,7 @@ export default function Routes() {
         <div className="space-y-4">
           {isLoading ? (
             Array(3).fill(0).map((_, i) => (
-              <Skeleton key={i} className="h-32 w-full" />
+              <Skeleton key={i} className="h-32 w-full bg-slate-800" />
             ))
           ) : routes?.map(route => (
             <RouteCard key={route.id} route={route} />

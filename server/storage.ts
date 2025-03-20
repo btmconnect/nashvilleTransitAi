@@ -65,7 +65,7 @@ export class MemStorage implements IStorage {
         endStopId: stops[1].id,
         duration: 20,
         nextDeparture: new Date(Date.now() + 15 * 60000),
-        tokenCost: 2.50,
+        tokenCost: "2.50",
       },
       {
         name: "Route 2",
@@ -74,7 +74,7 @@ export class MemStorage implements IStorage {
         endStopId: stops[2].id,
         duration: 15,
         nextDeparture: new Date(Date.now() + 5 * 60000),
-        tokenCost: 2.00,
+        tokenCost: "2.00",
       },
       {
         name: "Route 3",
@@ -83,7 +83,7 @@ export class MemStorage implements IStorage {
         endStopId: stops[4].id,
         duration: 25,
         nextDeparture: new Date(Date.now() + 10 * 60000),
-        tokenCost: 3.00,
+        tokenCost: "3.00",
       },
       {
         name: "Route 4",
@@ -92,7 +92,7 @@ export class MemStorage implements IStorage {
         endStopId: stops[6].id,
         duration: 12,
         nextDeparture: new Date(Date.now() + 8 * 60000),
-        tokenCost: 1.50,
+        tokenCost: "1.50",
       },
       {
         name: "Route 5",
@@ -101,7 +101,7 @@ export class MemStorage implements IStorage {
         endStopId: stops[4].id,
         duration: 10,
         nextDeparture: new Date(Date.now() + 12 * 60000),
-        tokenCost: 1.00,
+        tokenCost: "1.00",
       },
       {
         name: "Route 6",
@@ -110,7 +110,7 @@ export class MemStorage implements IStorage {
         endStopId: stops[9].id,
         duration: 18,
         nextDeparture: new Date(Date.now() + 20 * 60000),
-        tokenCost: 2.00,
+        tokenCost: "2.00",
       }
     ];
 
@@ -121,7 +121,7 @@ export class MemStorage implements IStorage {
 
     const mockWallet: InsertWallet = {
       userId: "demo-user",
-      balance: 50.00,
+      balance: "50.00",
     };
 
     const wallet: Wallet = {
@@ -134,13 +134,13 @@ export class MemStorage implements IStorage {
     const mockTransactions: InsertTransaction[] = [
       {
         walletId: wallet.id,
-        amount: 50.00,
+        amount: "50.00",
         type: "EARN",
         description: "Welcome bonus",
       },
       {
         walletId: wallet.id,
-        amount: -2.50,
+        amount: "-2.50",
         type: "SPEND",
         description: "Bus fare to Fisk University",
       },

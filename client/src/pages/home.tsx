@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import CommandInput from "@/components/command-input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { Mic, Settings } from "lucide-react";
+import { Mic, Settings, Wallet } from "lucide-react";
 
 export default function Home() {
   const [, setLocation] = useLocation();
@@ -12,8 +12,8 @@ export default function Home() {
   const [isAccessibilityMode, setIsAccessibilityMode] = useState(false);
 
   const handleCommand = (command: string) => {
-    if (command.toLowerCase().includes("route") || 
-        command.toLowerCase().includes("bus")) {
+    if (command.toLowerCase().includes("route") ||
+      command.toLowerCase().includes("bus")) {
       setLocation("/routes");
     } else {
       toast({
@@ -29,14 +29,26 @@ export default function Home() {
       <div className="max-w-lg mx-auto space-y-6">
         <div className="flex justify-between items-center">
           <h1 className="text-3xl font-bold text-blue-900">Nashville Transit AI</h1>
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={() => setIsAccessibilityMode(!isAccessibilityMode)}
-            aria-label="Toggle accessibility mode"
-          >
-            <Settings className="h-4 w-4" />
-          </Button>
+          <div className="flex gap-2">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => setLocation("/wallet")}
+              className="border-blue-200 text-blue-700 hover:bg-blue-50"
+              aria-label="Open wallet"
+            >
+              <Wallet className="h-4 w-4" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => setIsAccessibilityMode(!isAccessibilityMode)}
+              aria-label="Toggle accessibility mode"
+              className="border-blue-200 text-blue-700 hover:bg-blue-50"
+            >
+              <Settings className="h-4 w-4" />
+            </Button>
+          </div>
         </div>
 
         <Card className="shadow-lg border-blue-100">

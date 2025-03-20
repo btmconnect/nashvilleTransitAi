@@ -26,9 +26,10 @@ export class MemStorage implements IStorage {
     // Add mock stops
     const mockStops: InsertStop[] = [
       { name: "Downtown Transit Center", latitude: 36.166340, longitude: -86.781620 },
-      { name: "TSU Campus", latitude: 36.176590, longitude: -86.828560 },
+      { name: "Fisk University", latitude: 36.168470, longitude: -86.808360 },
       { name: "Vanderbilt Medical Center", latitude: 36.144570, longitude: -86.802864 },
       { name: "East Nashville", latitude: 36.177770, longitude: -86.751390 },
+      { name: "Belmont University", latitude: 36.132580, longitude: -86.795690 },
     ];
 
     const stops = mockStops.map(stop => {
@@ -42,7 +43,7 @@ export class MemStorage implements IStorage {
     const mockRoutes: InsertRoute[] = [
       {
         name: "Route 1",
-        description: "Downtown to TSU Express",
+        description: "Downtown to Fisk University Express",
         startStopId: stops[0].id,
         endStopId: stops[1].id,
         duration: 20,
@@ -55,6 +56,14 @@ export class MemStorage implements IStorage {
         endStopId: stops[2].id,
         duration: 15,
         nextDeparture: new Date(Date.now() + 5 * 60000),
+      },
+      {
+        name: "Route 3",
+        description: "Belmont University Connection",
+        startStopId: stops[0].id,
+        endStopId: stops[4].id,
+        duration: 25,
+        nextDeparture: new Date(Date.now() + 10 * 60000),
       },
     ];
 

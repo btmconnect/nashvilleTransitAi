@@ -68,7 +68,7 @@ export default function Home() {
               </h3>
               <ul className={`mt-2 space-y-2 ${isAccessibilityMode ? 'text-lg' : ''}`}>
                 <li>"Find bus to downtown"</li>
-                <li>"Next bus to TSU"</li>
+                <li>"Next bus to Fisk University"</li>
                 <li>"Schedule ride to medical center"</li>
               </ul>
             </CardContent>
@@ -81,8 +81,9 @@ export default function Home() {
               </h3>
               <ul className={`mt-2 space-y-2 ${isAccessibilityMode ? 'text-lg' : ''}`}>
                 <li>Downtown Transit Center</li>
-                <li>TSU Campus</li>
+                <li>Fisk University</li>
                 <li>Vanderbilt Medical Center</li>
+                <li>Belmont University</li>
               </ul>
             </CardContent>
           </Card>

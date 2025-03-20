@@ -25,10 +25,10 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 p-4">
+    <div className="min-h-screen bg-blue-50 p-4">
       <div className="max-w-lg mx-auto space-y-6">
         <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-white">Nashville Transit AI</h1>
+          <h1 className="text-3xl font-bold text-blue-900">Nashville Transit AI</h1>
           <Button
             variant="outline"
             size="icon"
@@ -39,12 +39,12 @@ export default function Home() {
           </Button>
         </div>
 
-        <Card className="bg-slate-800 border-slate-700">
+        <Card className="shadow-lg border-blue-100">
           <CardContent className={`p-6 ${isAccessibilityMode ? 'text-lg' : ''}`}>
             <CommandInput
               onCommand={handleCommand}
               placeholder="Ask about transit routes..."
-              className={`bg-slate-900 border-slate-700 text-white ${isAccessibilityMode ? 'text-xl p-6' : ''}`}
+              className={`bg-white border-blue-200 ${isAccessibilityMode ? 'text-xl p-6' : ''}`}
             />
 
             <div className="mt-4 flex justify-center">
@@ -61,12 +61,12 @@ export default function Home() {
         </Card>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Card className="bg-slate-800 border-slate-700">
+          <Card className="border-blue-100">
             <CardContent className="p-6">
-              <h3 className={`font-semibold text-white ${isAccessibilityMode ? 'text-xl' : 'text-lg'}`}>
+              <h3 className={`font-semibold text-blue-900 ${isAccessibilityMode ? 'text-xl' : 'text-lg'}`}>
                 Try asking:
               </h3>
-              <ul className={`mt-2 space-y-2 text-slate-300 ${isAccessibilityMode ? 'text-lg' : ''}`}>
+              <ul className={`mt-2 space-y-2 text-blue-800 ${isAccessibilityMode ? 'text-lg' : ''}`}>
                 <li>"Find bus to downtown"</li>
                 <li>"Next bus to Fisk University"</li>
                 <li>"Schedule ride to medical center"</li>
@@ -74,12 +74,12 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="bg-slate-800 border-slate-700">
+          <Card className="border-blue-100">
             <CardContent className="p-6">
-              <h3 className={`font-semibold text-white ${isAccessibilityMode ? 'text-xl' : 'text-lg'}`}>
+              <h3 className={`font-semibold text-blue-900 ${isAccessibilityMode ? 'text-xl' : 'text-lg'}`}>
                 Popular Destinations
               </h3>
-              <ul className={`mt-2 space-y-2 text-slate-300 ${isAccessibilityMode ? 'text-lg' : ''}`}>
+              <ul className={`mt-2 space-y-2 text-blue-800 ${isAccessibilityMode ? 'text-lg' : ''}`}>
                 <li>Downtown Transit Center</li>
                 <li>Fisk University</li>
                 <li>Vanderbilt Medical Center</li>

@@ -23,13 +23,18 @@ export class MemStorage implements IStorage {
   }
 
   private initializeMockData() {
-    // Add mock stops
+    // Add mock stops with real Nashville coordinates
     const mockStops: InsertStop[] = [
       { name: "Downtown Transit Center", latitude: 36.166340, longitude: -86.781620 },
       { name: "Fisk University", latitude: 36.168470, longitude: -86.808360 },
       { name: "Vanderbilt Medical Center", latitude: 36.144570, longitude: -86.802864 },
       { name: "East Nashville", latitude: 36.177770, longitude: -86.751390 },
       { name: "Belmont University", latitude: 36.132580, longitude: -86.795690 },
+      { name: "Music Row", latitude: 36.151430, longitude: -86.792110 },
+      { name: "The Gulch", latitude: 36.151890, longitude: -86.784480 },
+      { name: "12 South", latitude: 36.127670, longitude: -86.789480 },
+      { name: "Nashville Farmers' Market", latitude: 36.171890, longitude: -86.784920 },
+      { name: "Jefferson Street", latitude: 36.173870, longitude: -86.800710 }
     ];
 
     const stops = mockStops.map(stop => {
@@ -39,7 +44,7 @@ export class MemStorage implements IStorage {
       return newStop;
     });
 
-    // Add mock routes
+    // Add mock routes with realistic timings and connections
     const mockRoutes: InsertRoute[] = [
       {
         name: "Route 1",
@@ -65,6 +70,30 @@ export class MemStorage implements IStorage {
         duration: 25,
         nextDeparture: new Date(Date.now() + 10 * 60000),
       },
+      {
+        name: "Route 4",
+        description: "Music Row - Gulch Connector",
+        startStopId: stops[5].id,
+        endStopId: stops[6].id,
+        duration: 12,
+        nextDeparture: new Date(Date.now() + 8 * 60000),
+      },
+      {
+        name: "Route 5",
+        description: "12 South - Belmont Express",
+        startStopId: stops[7].id,
+        endStopId: stops[4].id,
+        duration: 10,
+        nextDeparture: new Date(Date.now() + 12 * 60000),
+      },
+      {
+        name: "Route 6",
+        description: "Farmers Market - Jefferson Loop",
+        startStopId: stops[8].id,
+        endStopId: stops[9].id,
+        duration: 18,
+        nextDeparture: new Date(Date.now() + 20 * 60000),
+      }
     ];
 
     mockRoutes.forEach(route => {
